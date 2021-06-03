@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
+
     <header class="page-header">
       <div class="container page-header--row">
         <div class="page-header__logo">Online Shop</div>
+        <button class="page-header__toggle" type="button">
+          <span class="visually-hidden">Menu open</span>
+        </button>
         <nav class="page-header__main-nav">
           <ul class="main-nav__list">
             <li class="main-nav__list-item">Home</li>
@@ -21,7 +25,44 @@
         </nav>
       </div>
     </header>
-    <main></main>
+
+    <main>
+
+      <section class="slider">
+
+        <div class="slider__toggles">
+          <button class="slider__toggle slider__toggle--current" type="button" aria-label="first slide"></button>
+          <button class="slider__toggle" type="button" aria-label="second slide"></button>
+          <button class="slider__toggle" type="button"aria-label="third slide"></button>
+        </div>
+
+        <ul class="slider__list">
+          <li class="slider__list-item">
+            <div class="slider__list-item__container">
+              <p class="slider__list-item__category">Aluminium club</p>
+              <p class="slider__list-item__title">Expirience Ray-Ban</p>
+            </div>
+          </li>
+          <li class="slider__list-item">
+            <div class="slider__list-item__container">
+              <p class="slider__list-item__category">Wooden story</p>
+              <p class="slider__list-item__title">Expirience Brevno</p>
+            </div>
+          </li>
+          <li class="slider__list-item">
+            <div class="slider__list-item__container">
+              <p class="slider__list-item__category">Vintage frame</p>
+              <p class="slider__list-item__title">Expirience Nina Ricci</p>
+            </div>
+          </li>
+        </ul>
+
+        <button class="slider__arrow slider__arrow--prev">Previous</button>
+        <button class="slider__arrow slider__arrow--next">Next</button>
+
+      </section>
+    </main>
+
     <footer></footer>
   </body>
 </html>
