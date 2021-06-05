@@ -12,28 +12,38 @@
   <body class="page__body">
 
     <header class="page-header">
-      <div class="container page-header--row">
+      <div class="container page-header__bar">
         <div class="page-header__logo">Online Shop</div>
         <button class="page-header__toggle" type="button">
           <span class="visually-hidden">Menu open</span>
         </button>
         <nav class="page-header__main-nav">
           <ul class="main-nav__list">
-            <li class="main-nav__list-item">Home</li>
-            <li class="main-nav__list-item">Women</li>
-            <li class="main-nav__list-item">Men</li>
-            <li class="main-nav__list-item">Other</li>
-            <li class="main-nav__list-item">Purchase</li>
+            <li class="main-nav__list-item">
+              <a class="main-nav__link" href="#">Home</a>
+            </li>
+            <li class="main-nav__list-item">
+              <a class="main-nav__link" href="#">Women</a>
+            </li>
+            <li class="main-nav__list-item">
+              <a class="main-nav__link" href="#">Men</a>
+            </li>
+            <li class="main-nav__list-item">
+              <a class="main-nav__link" href="#">Other</a>
+            </li>
+            <li class="main-nav__list-item">
+              <a class="main-nav__link" href="#">Purchase</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main class="page-main">
+
+      <h1 class="visually-hidden">Eyeglasses online shop</h1>
 
       <section class="slider">
-
-        <h1 class="visually hidden">Eyeglasses online shop</h1>
 
         <div class="slider__toggles">
           <button class="slider__toggle slider__toggle--current" type="button" aria-label="first slide"></button>
@@ -173,7 +183,9 @@
 
       <section class="subscription">
 
-        <h2 class="subscription__title title">newsletters signup</h2>
+        <h2 class="subscription__title title">Newsletters signup</h2>
+
+        <p class="subscription__description">Lorem ipsum dolor sit amen, dolor imun ra adlip  ulissys</p>
 
         <form class="subscription__form form" action="https://echo.htmlacademy.ru" method="POST">
 
@@ -188,22 +200,22 @@
 
     </main>
 
-    <footer>
+    <footer class="page-footer">
 
-      <div class="shipping-promo">
-        <p class="shipping-promo__slogan">
+      <section class="shipping-info">
+        <p class="shipping-info__info">
           <span class="fa fa-truck" aria-hidden="true"></span>
           Free shipping on orders over $100
         </p>
-        <p class="shipping-promo__contact">
+        <p class="shipping-info__contact">
           <span class="fa fa-phone" aria-hidden="true"></span>
           Call us! Toll free-
-          <a class="shipping-promo__phone" href="tel:+1-409-8888-0099"> 409-8888-0099</a>
+          <a class="shipping-info__phone" href="tel:+1-409-8888-0099"> 409-8888-0099</a>
         </p>
-      </div>
+      </section>
 
-      <div class="information">
-        <p class="infomation__title">Information</p>
+      <section class="information">
+        <p class="information__title">Information</p>
         <ul class="information__list">
           <li class="information__list-item">
             <span class="fa fa-angle-right" aria-hidden="true"></span>
@@ -230,9 +242,9 @@
             <a href="#">Donec et lorem suscipit.</a>
           </li>
         </ul>
-      </div>
+      </section>
 
-      <div class="contacts">
+      <section class="contacts">
         <p class="contacts__title">Contact us</p>
         <p class="contacts__description">
           Leo Store<br>
@@ -258,7 +270,7 @@
             </a>
           </li>
         </ul>
-      </div>
+      </section>
 
     </footer>
 

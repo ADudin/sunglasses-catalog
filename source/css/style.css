@@ -19,14 +19,148 @@
   font-style: normal;
   font-display: swap;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+p {
+  margin: 0;
+}
+.fa {
+  color: #39a0b9;
+}
 .page {
   min-width: 320px;
 }
 .page__body {
   font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: auto;
+  color: #656565;
 }
-.fa {
-  color: #39a0b9;
+.page-header {
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #4cb1ca;
+  padding-top: 43px;
+}
+.page-header__bar {
+  background-color: #ffffff;
+}
+.page-header__logo {
+  font-size: 2.25em;
+  letter-spacing: -0.03em;
+}
+.page-header__main-nav {
+  font-size: 0.87em;
+  letter-spacing: -0.01em;
+}
+.slider {
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.slider__list-item__category,
+.slider__list-item__title {
+  background-color: #53524b;
+}
+.slider__list-item__category {
+  font-size: 1.87em;
+  font-weight: 300;
+}
+.slider__list-item__title {
+  font-size: 1.75em;
+  font-weight: 700;
+}
+.catalog__list-item {
+  line-height: 22px;
+}
+.catalog__list-item__description {
+  font-size: 0.87em;
+}
+.catalog__list-item__price {
+  font-size: 1.12em;
+  color: #7db122;
+}
+.catalog__list-item__price--old {
+  font-size: 0.87em;
+  text-decoration: line-through;
+  color: #464148;
+}
+.title {
+  font-size: 1.5em;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+.subscription__description {
+  font-size: 0.87em;
+  line-height: 20px;
+}
+.form__submit {
+  font-size: 0.87em;
+  line-height: 22px;
+  color: #ffffff;
+  background-color: #7db122;
+  border: none;
+}
+.shipping-info {
+  font-size: 1.31em;
+  color: #ffffff;
+  background-color: #4cb1ca;
+}
+.information {
+  color: #ffffff;
+  background-color: #39a0b9;
+}
+.information__title {
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+.information__list-item {
+  font-size: 0.81em;
+  line-height: 24px;
+}
+.information .fa {
+  color: #ffffff;
+}
+.contacts {
+  color: #ffffff;
+  background-color: #39a0b9;
+}
+.contacts__title {
+  font-size: 1.25em;
+  text-transform: uppercase;
+}
+.contacts__description {
+  font-size: 0.81em;
+  line-height: 24px;
+}
+.contacts .fa {
+  background-color: #ffffff;
+}
+.page-footer {
+  background-color: #0b4b5a;
+  padding-bottom: 64px;
 }
 
 /*# sourceMappingURL=style.css.map */
