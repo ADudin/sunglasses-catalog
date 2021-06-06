@@ -12,12 +12,18 @@
   <body class="page__body">
 
     <header class="page-header">
-      <div class="container page-header__bar">
+      <div class="page-header__bar">
         <div class="page-header__logo">Online Shop</div>
-        <button class="page-header__toggle" type="button">
-          <span class="visually-hidden">Menu open</span>
-        </button>
-        <nav class="page-header__main-nav">
+        <div class="page-header__toggle-container">
+          <!-- menu open class: page-header__toggle--open,
+              menu close class: page-header__toggle--close -->
+          <button class="page-header__toggle page-header__toggle--open" type="button">
+            <span class="visually-hidden">Menu interaction</span>
+          </button>
+        </div>
+        <!-- navigation show class: page-header__main-nav--show,
+            navigation disabled class: page-header__main-nav--disabled -->
+        <nav class="page-header__main-nav page-header__main-nav--disabled">
           <ul class="main-nav__list">
             <li class="main-nav__list-item">
               <a class="main-nav__link" href="#">Home</a>
@@ -273,6 +279,8 @@
       </section>
 
     </footer>
+
+    <script defer src="js/main-menu.js"></script>
 
   </body>
 </html>

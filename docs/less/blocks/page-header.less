@@ -6,15 +6,135 @@
 
   &__bar {
     background-color: @white;
+    display: grid;
+    grid-template-columns: 20px max-content auto 20px;
+    grid-template-rows: 29px min-content 29px min-content;
+    align-items: center;
   }
 
   &__logo {
     font-size: 2.25em;
     letter-spacing: -0.03em;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  &__toggle-container {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: right;
+    height: min-content;
+    line-height: 0;
+  }
+
+  &__toggle {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 23px;
+    height: 23px;
+    padding: 0;
+
+    &--open::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: @basic-gray;
+      border-radius: 1px;
+      box-shadow: 0 9px 0 0 @basic-gray, 0 18px 0 0 @basic-gray;
+    }
+
+    &--close::before,
+    &--close::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 23px;
+      height: 4px;
+      background-color: @basic-gray;
+    }
+
+    &--close::before {
+      transform: rotate(45deg);
+    }
+
+    &--close::after {
+      transform: rotate(-45deg);
+    }
+
+    &--open:hover::before,
+    &--open:focus::before {
+      background-color: @sky-blue;
+      box-shadow: 0 9px 0 0 @sky-blue, 0 18px 0 0 @sky-blue;
+    }
+
+    &--open:active::before {
+      background-color: @sea-blue;
+      box-shadow: 0 9px 0 0 @sea-blue, 0 18px 0 0 @sea-blue;
+    }
+
+    &--close:hover::before,
+    &--close:hover::after,
+    &--close:focus::before,
+    &--close:focus::after {
+      background-color: @sky-blue;
+    }
+
+    &--close:active::before,
+    &--close:active::after {
+      background-color: @sea-blue;
+    }
   }
 
   &__main-nav {
-    font-size: 0.87em;
+    font-size: 1.3em;
     letter-spacing: -0.01em;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    justify-self: center;
+
+    &--disabled {
+      display: none;
+    }
+
+    &--show {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__bar {
+      grid-template-columns: 188px max-content auto 188px;
+      grid-template-rows: 29px min-content 29px;
+    }
+
+    &__toggle {
+      display: none;
+    }
+
+    &__main-nav {
+      font-size: 0.87em;
+      background-color: @white;
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      justify-self: end;
+
+      &--disabled {
+        display: block;
+      }
+    }
   }
 }
