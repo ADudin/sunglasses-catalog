@@ -52,10 +52,10 @@
       <section class="slider">
 
         <div class="slider__toggles">
-          <button class="slider__toggle slider__toggle--current" type="button" aria-label="first slide"></button>
-          <button class="slider__toggle" type="button" aria-label="second slide"></button>
-          <button class="slider__toggle" type="button"aria-label="third slide"></button>
-          <button class="slider__toggle" type="button"aria-label="fourth slide"></button>
+          <button class="slider__toggle slider__toggle--current" onclick="currentSlide(1)" type="button" aria-label="first slide"></button>
+          <button class="slider__toggle" onclick="currentSlide(2)" type="button" aria-label="second slide"></button>
+          <button class="slider__toggle" onclick="currentSlide(3)" type="button" aria-label="third slide"></button>
+          <button class="slider__toggle" onclick="currentSlide(4)" type="button" aria-label="fourth slide"></button>
         </div>
 
         <ul class="slider__list">
@@ -68,19 +68,19 @@
           <li class="slider__list-item">
             <div class="slider__list-item__container">
               <p class="slider__list-item__category">Wooden story</p>
-              <p class="slider__list-item__title">Expirience Brevno</p>
+              <p class="slider__list-item__title">Expirience Brand2</p>
             </div>
           </li>
           <li class="slider__list-item">
             <div class="slider__list-item__container">
               <p class="slider__list-item__category">Vintage frame</p>
-              <p class="slider__list-item__title">Expirience Nina Ricci</p>
+              <p class="slider__list-item__title">Expirience Brand3</p>
             </div>
           </li>
           <li class="slider__list-item">
             <div class="slider__list-item__container">
               <p class="slider__list-item__category">Reflection of light</p>
-              <p class="slider__list-item__title">Expirience Ray-Ban</p>
+              <p class="slider__list-item__title">Expirience Brand4</p>
             </div>
           </li>
         </ul>
@@ -285,6 +285,7 @@
     </footer>
 
     <script defer src="js/main-menu.js"></script>
+    <script defer src="js/slider.js"></script>
 
   </body>
 </html>

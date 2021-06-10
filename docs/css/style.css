@@ -231,6 +231,8 @@ p {
 .slider__list-item {
   display: none;
   height: 33.93vw;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .slider__list-item--current {
   display: grid;
@@ -243,8 +245,15 @@ p {
 }
 .slider__list-item:first-child {
   background-image: url("../img/slider/Background_1.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+}
+.slider__list-item:nth-child(2) {
+  background-image: url("../img/slider/Background_2.png");
+}
+.slider__list-item:nth-child(3) {
+  background-image: url("../img/slider/Background_3.png");
+}
+.slider__list-item:last-child {
+  background-image: url("../img/slider/Background_4.png");
 }
 .slider__list-item__category,
 .slider__list-item__title {

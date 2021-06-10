@@ -48,6 +48,8 @@
   &__list-item {
     display: none;
     height: 33.93vw;
+    background-repeat: no-repeat;
+    background-size: contain;
 
     &--current {
       display: grid;
@@ -62,8 +64,18 @@
 
     &:first-child {
       background-image: url("../img/slider/Background_1.png");
-      background-repeat: no-repeat;
-      background-size: contain;
+    }
+
+    &:nth-child(2) {
+      background-image: url("../img/slider/Background_2.png");
+    }
+
+    &:nth-child(3) {
+      background-image: url("../img/slider/Background_3.png");
+    }
+
+    &:last-child {
+      background-image: url("../img/slider/Background_4.png");
     }
   }
 
