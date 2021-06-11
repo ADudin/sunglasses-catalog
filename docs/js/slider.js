@@ -1,5 +1,7 @@
 const prevSlideButton = document.querySelector('.slider__arrow--prev');
 const nextSlideButton = document.querySelector('.slider__arrow--next');
+const slides = document.getElementsByClassName('slider__list-item');
+const toggles = document.getElementsByClassName('slider__toggle');
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -13,7 +15,7 @@ function minusSlide() {
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n)
+  showSlides(slideIndex = n);
 }
 
 prevSlideButton.addEventListener('click', (evt) => {
@@ -27,18 +29,28 @@ nextSlideButton.addEventListener('click', (evt) => {
 })
 
 function showSlides(n) {
-  const slides = document.getElementsByClassName('slider__list-item');
-  const toggles = document.getElementsByClassName('slider__toggle');
-
   if (n > slides.length) {
-    slideIndex = 1
-  };
+    slideIndex = 1;
+  }
+
   if (n < 1) {
-    slideIndex = slides.lenght
-  };
+    slideIndex = slides.lenght;
+  }
+
   for (let i = 0; i < slides.length; i++) {
     slides[i].classList.remove('slider__list-item--current');
+    nextSlideButton.disabled = false;
+    prevSlideButton.disabled = false;
+
+    if (n === slides.length) {
+      nextSlideButton.disabled = true;
+    }
+
+    if (n === 1) {
+      prevSlideButton.disabled = true;
+    }
   }
+
   for (let i = 0; i < toggles.length; i++) {
     toggles[i].classList.remove('slider__toggle--current');
   }

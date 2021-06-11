@@ -167,7 +167,10 @@
       height: 67px;
       cursor: pointer;
 
-      & .fa {
+      & .fa,
+      &:disabled:hover .fa,
+      &:disabled:focus .fa,
+      &:disabled:active .fa {
         color: @light-gray;
       }
 

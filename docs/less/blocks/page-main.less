@@ -1,0 +1,30 @@
+.page-main {
+  display: grid;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 158px repeat(4, 1fr) 158px;
+    grid-template-rows: repeat(2, min-content);
+    grid-column-gap: 30px;
+
+    & .slider {
+      grid-column-start: 1;
+      grid-column-end: 7;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+
+    & .catalog {
+      grid-column-start: 2;
+      grid-column-end: 5;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+
+    & .subscription {
+      grid-column-start: 5;
+      grid-column-end: 6;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+  }
+}
