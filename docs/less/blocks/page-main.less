@@ -1,5 +1,11 @@
 .page-main {
   display: grid;
+  grid-row-gap: 25px;
+
+  & .catalog,
+  & .subscription {
+    justify-self: center;
+  }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 158px repeat(4, 1fr) 158px;

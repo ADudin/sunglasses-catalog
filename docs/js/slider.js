@@ -1,7 +1,5 @@
 const prevSlideButton = document.querySelector('.slider__arrow--prev');
 const nextSlideButton = document.querySelector('.slider__arrow--next');
-const slides = document.getElementsByClassName('slider__list-item');
-const toggles = document.getElementsByClassName('slider__toggle');
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -29,6 +27,9 @@ nextSlideButton.addEventListener('click', (evt) => {
 })
 
 function showSlides(n) {
+  const slides = document.getElementsByClassName('slider__list-item');
+  const toggles = document.getElementsByClassName('slider__toggle');
+
   if (n > slides.length) {
     slideIndex = 1;
   }
