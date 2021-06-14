@@ -451,9 +451,50 @@ p {
   letter-spacing: -0.01em;
   text-transform: uppercase;
 }
+.subscription {
+  text-align: center;
+  border-top: 4px solid #4cb1ca;
+  box-shadow: 0 0 4px 2px #eeeeee;
+  max-width: 187px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 0 23px 31px 23px;
+  margin-top: 20px;
+}
 .subscription__description {
+  position: relative;
   font-size: 0.87em;
   line-height: 20px;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+}
+.subscription__description::after {
+  content: "";
+  position: absolute;
+  width: 85px;
+  height: 1px;
+  background-color: #eeeeee;
+  bottom: 0;
+  left: 27.5%;
+}
+.form__input {
+  font-family: inherit;
+  color: inherit;
+  line-height: 27px;
+  border: 1px solid #e2e2e2;
+  width: 180px;
+  padding: 0 0 0 3px;
+  margin-bottom: 18px;
+}
+.form__input:hover,
+.form__input:focus {
+  border-color: #4cb1ca;
+  outline: none;
+}
+.form__input:active {
+  outline: solid 1px #0b4b5a;
+  outline-offset: -1px;
 }
 .form__submit {
   font-size: 0.87em;
@@ -461,6 +502,15 @@ p {
   color: #ffffff;
   background-color: #7db122;
   border: none;
+  cursor: pointer;
+  padding: 11px 25px;
+}
+.form__submit:hover,
+.form__submit:focus {
+  background-color: #4cb1ca;
+}
+.form__submit:active {
+  background-color: #0b4b5a;
 }
 .shipping-info {
   font-size: 1.31em;
@@ -554,6 +604,7 @@ p {
 .page-main {
   display: grid;
   grid-row-gap: 25px;
+  margin-bottom: 75px;
 }
 .page-main .catalog,
 .page-main .subscription {

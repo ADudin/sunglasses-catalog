@@ -1,6 +1,27 @@
 .subscription {
+  text-align: center;
+  border-top: 4px solid @sky-blue;
+  box-shadow: 0 0 4px 2px @extra-light-gray;
+  max-width: 187px;
+  height: min-content;
+  padding: 0 23px 31px 23px;
+  margin-top: 20px;
+
   &__description {
+    position: relative;
     font-size: 0.87em;
     line-height: 20px;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 85px;
+      height: 1px;
+      background-color: @extra-light-gray;
+      bottom: 0;
+      left: 50% - 22.5px;
+    }
   }
 }

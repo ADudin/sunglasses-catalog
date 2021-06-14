@@ -1,9 +1,41 @@
 .form {
+  &__input {
+    font-family: inherit;
+    color: inherit;
+    line-height: 27px;
+    border: 1px solid @gray;
+    width: 180px;
+    padding: 0 0 0 3px;
+    margin-bottom: 18px;
+
+    &:hover,
+    &:focus {
+      border-color: @sky-blue;
+      outline: none;
+    }
+
+    &:active {
+      outline: solid 1px @sea-blue;
+      outline-offset: -1px;
+    }
+  }
+
   &__submit {
     font-size: 0.87em;
     line-height: 22px;
     color: @white;
     background-color: @green;
     border: none;
+    cursor: pointer;
+    padding: 11px 25px;
+
+    &:hover,
+    &:focus {
+      background-color: @sky-blue;
+    }
+
+    &:active {
+      background-color: @sea-blue;
+    }
   }
 }
