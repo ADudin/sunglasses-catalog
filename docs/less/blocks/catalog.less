@@ -9,6 +9,16 @@
     line-height: 22px;
     box-shadow: 0 0 4px 2px @extra-light-gray;
     padding: 8px 8px 25px 8px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 4px 2px @light-gray;
+    }
+
+    &:active {
+      box-shadow: 0 0 4px 2px @basic-gray;
+    }
   }
 
   &__list-item__description-wrapper {

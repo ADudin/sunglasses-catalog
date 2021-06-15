@@ -210,6 +210,27 @@
             </div>
           </li>
 
+          <!-- Product card popup -->
+
+          <template id="card">
+            <div class="product-card">
+
+              <button class="product-card__close-button" aria-label="Close product card"></button>
+              <div class="product-card__img-container">
+                <img class="product-card__img" width="217" height="228">
+              </div>
+              <p class="product-card__title"></p>
+              <p class="product-card__description"></p>
+              <p class="product-card__price">
+                <span class="popup__price--old"></span>
+              </p>
+              <button class="catalog__list-item__cart product-card__cart" aria-label="Add to cart">
+                <img width="27" height="26" src="img/catalog/cart.png">
+              </button>
+
+            </div>
+          </template>
+
         </ul>
 
       </section>
@@ -312,6 +333,7 @@
 
     <script defer src="js/main-menu.js"></script>
     <script defer src="js/slider.js"></script>
+    <script defer src="js/product-cards.js"></script>
 
   </body>
 </html>

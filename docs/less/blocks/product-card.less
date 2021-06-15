@@ -1,0 +1,132 @@
+.product-card {
+  position: fixed;
+  overflow: auto;
+  background-color: @white;
+  box-shadow: 0 0 4px 2px @light-gray;
+  top: 5%;
+  left: 50%;
+  max-width: 302px;
+  max-height: 90vh;
+  display: grid;
+  grid-template-columns: 15px auto min-content 15px;
+  grid-template-rows: repeat(5, min-content);
+  grid-row-gap: 10px;
+  padding: 10px 0;
+  margin-left: -151px;
+
+  &__close-button {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 0;
+    margin-left: 10px;
+    justify-self: end;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 30px;
+      height: 4px;
+      background-color: @basic-gray;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after,
+    &:focus::before,
+    &:focus::after {
+      background-color: @sky-blue;
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: @sea-blue;
+    }
+  }
+
+  &__img-container {
+    position: relative;
+    box-shadow: 0 0 4px 2px @extra-light-gray;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+    padding: 4px 4px 0 4px;
+
+    &--new::before {
+      content: "";
+      position: absolute;
+      width: 96px;
+      height: 93px;
+      background-image: url("../img/catalog/new.png");
+      top: -3px;
+      right: -2px;
+    }
+
+    &--sale::before {
+      content: "";
+      position: absolute;
+      width: 96px;
+      height: 93px;
+      background-image: url("../img/catalog/sale.png");
+      top: -3px;
+      left: -2px;
+    }
+  }
+
+  &__title {
+    font-weight: @bold;
+    font-size: 1.25em;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+  }
+
+  &__description {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  &__price {
+    color: @green;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    justify-self: center;
+    align-self: center;
+
+    &--old {
+      color: initial;
+    }
+  }
+
+  &__cart {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+}
