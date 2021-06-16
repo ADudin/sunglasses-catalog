@@ -645,7 +645,7 @@ p {
   text-align: center;
 }
 .contacts__social-list-item:not(:last-child) {
-  margin-right: 8px;
+  margin-right: 10px;
 }
 .contacts__social-list::before {
   content: "";
@@ -663,13 +663,13 @@ p {
   cursor: pointer;
 }
 .contacts .fa-linkedin {
-  padding: 6px 6.5px;
-}
-.contacts .fa-rss {
   padding: 6px 7px;
 }
+.contacts .fa-rss {
+  padding: 6px 7.5px;
+}
 .contacts .fa-facebook {
-  padding: 6px 8.35px;
+  padding: 6px 9.5px;
 }
 .contacts .fa:hover,
 .contacts .fa:focus {
@@ -861,6 +861,11 @@ p {
   }
 }
 .product-card {
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+}
+.product-card__wrapper {
   position: fixed;
   overflow: auto;
   background-color: #ffffff;
