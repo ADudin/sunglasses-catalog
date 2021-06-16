@@ -48,6 +48,9 @@ p {
 .muted {
   opacity: 0.3;
 }
+.hidden {
+  display: none;
+}
 .fa {
   color: #39a0b9;
 }
