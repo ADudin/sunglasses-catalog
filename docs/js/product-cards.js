@@ -69,6 +69,9 @@ const renderProductCard = (productItem) => {
 for (let i = 0; i < cardsList.length; i++) {
   cardsList[i].addEventListener('click', (evt) => {
     evt.preventDefault();
-    renderProductCard(cardsList[i]);
+
+    if (!main.children[main.children.length - 1].classList.contains('product-card')) {
+      renderProductCard(cardsList[i]);
+    }
   })
 }

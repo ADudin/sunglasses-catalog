@@ -1,13 +1,16 @@
 .information {
   color: @white;
   background-color: @dark-sky-blue;
-  padding-left: 4px;
 
   &__title {
     font-size: 1.25em;
     text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 15px;
+    margin-top: 0;
+  }
+
+  &__list {
+    margin-top: 22px;
+    margin-left: 12px;
   }
 
   &__list-item {
@@ -17,17 +20,6 @@
 
   & .fa {
     color: @white;
-  }
-
-  @media (min-width: @tablet-width) {
-    &__title {
-      text-align: start;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &__title {
-      margin-bottom: 35px;
-    }
+    transform: translateX(-5px);
   }
 }

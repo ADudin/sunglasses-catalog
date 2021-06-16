@@ -323,7 +323,9 @@ p {
   }
   .slider__list-item__title {
     font-size: 1.75em;
+    letter-spacing: 0.01em;
     padding-right: 16px;
+    padding-left: 16px;
   }
   .slider__arrow {
     position: absolute;
@@ -365,9 +367,12 @@ p {
     padding-left: 5px;
   }
 }
+.catalog__title {
+  margin: 15px 0 15px 0;
+}
 .catalog__list {
   display: grid;
-  grid-row-gap: 30px;
+  grid-row-gap: 28px;
 }
 .catalog__list-item {
   position: relative;
@@ -389,7 +394,7 @@ p {
   grid-template-columns: 165px min-content;
   grid-template-rows: repeat(2, -webkit-min-content);
   grid-template-rows: repeat(2, min-content);
-  padding: 10px 0 0 3px;
+  padding: 5px 0 0 3px;
 }
 .catalog__list-item__description {
   font-size: 0.87em;
@@ -462,7 +467,7 @@ p {
 }
 .title {
   font-size: 1.5em;
-  letter-spacing: -0.01em;
+  font-weight: 300;
   text-transform: uppercase;
 }
 .subscription {
@@ -475,6 +480,10 @@ p {
   height: min-content;
   padding: 0 23px 31px 23px;
   margin-top: 20px;
+}
+.subscription__title {
+  letter-spacing: 0.02em;
+  margin: 20px 0 8px 0;
 }
 .subscription__description {
   position: relative;
@@ -529,11 +538,12 @@ p {
 .shipping-info {
   font-size: 1.31em;
   color: #ffffff;
+  text-transform: uppercase;
   background-color: #4cb1ca;
   display: grid;
   grid-template-columns: 20px auto 20px;
   grid-row-gap: 30px;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 .shipping-info__info,
 .shipping-info__contact {
@@ -589,13 +599,15 @@ p {
 .information {
   color: #ffffff;
   background-color: #39a0b9;
-  padding-left: 4px;
 }
 .information__title {
   font-size: 1.25em;
   text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 15px;
+  margin-top: 0;
+}
+.information__list {
+  margin-top: 22px;
+  margin-left: 12px;
 }
 .information__list-item {
   font-size: 0.81em;
@@ -603,28 +615,18 @@ p {
 }
 .information .fa {
   color: #ffffff;
-}
-@media (min-width: 660px) {
-  .information__title {
-    text-align: start;
-  }
-}
-@media (min-width: 1400px) {
-  .information__title {
-    margin-bottom: 35px;
-  }
+  transform: translateX(-5px);
 }
 .contacts {
   color: #ffffff;
   background-color: #39a0b9;
   padding-left: 3px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 .contacts__title {
   font-size: 1.25em;
   text-transform: uppercase;
-  margin-bottom: 15px;
-  text-align: center;
+  margin-bottom: 20px;
 }
 .contacts__description,
 .contacts__address,
@@ -632,6 +634,9 @@ p {
 .contacts__email {
   font-size: 0.81em;
   line-height: 24px;
+}
+.contacts__description {
+  margin-top: 18px;
 }
 .contacts__address {
   font-style: normal;
@@ -662,7 +667,7 @@ p {
 .contacts .fa {
   background-color: #ffffff;
   border-radius: 50%;
-  transform: scale(1.5);
+  transform: scale(1.3);
   cursor: pointer;
 }
 .contacts .fa-linkedin {
@@ -688,14 +693,11 @@ p {
 }
 @media (min-width: 1400px) {
   .contacts__title {
-    padding-left: 2px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    margin-left: -4px;
   }
-  .contacts__description,
-  .contacts__address,
-  .contacts__phone,
-  .contacts__email {
-    padding-left: 5px;
+  .contacts__social-list {
+    margin-left: -10px;
   }
 }
 .page-footer {
@@ -756,7 +758,8 @@ p {
   .page-footer {
     grid-template-columns: 188px repeat(4, 1fr) 188px;
     grid-column-gap: 0;
-    grid-row-gap: 54px;
+    grid-row-gap: 45px;
+    padding-bottom: 12px;
   }
   .page-footer .shipping-info {
     grid-column-start: 1;
@@ -808,7 +811,7 @@ p {
     flex-direction: row;
   }
   .main-nav__list-item:not(:last-child) {
-    margin-right: 23px;
+    margin-right: 25px;
   }
   .main-nav__link {
     background-color: inherit;
@@ -864,11 +867,6 @@ p {
   }
 }
 .product-card {
-  width: 100vw;
-  height: 100vh;
-  z-index: 100;
-}
-.product-card__wrapper {
   position: fixed;
   overflow: auto;
   background-color: #ffffff;
